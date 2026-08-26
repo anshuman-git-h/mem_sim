@@ -81,16 +81,6 @@ Optimal (Belady) always dominates as expected — the interesting comparisons
 are LRU vs. Clock vs. LFU under the Looping and Working-Set workloads, where
 the theoretical gap in the textbook is much smaller than it is under Random.
 
-## Extending it (good next steps for depth)
-
-- Multi-core coherence: add a MESI/MOESI protocol across per-core L1/L2 with
-  a shared L3, and measure coherence-traffic overhead.
-- NUMA-style access: model asymmetric RAM latency by "socket."
-- Prefetching: stride/next-line prefetcher into L1, measure AMAT delta.
-- Write-back vs. write-through + dirty-bit eviction cost.
-- Replace the offline Belady lookahead with an approximation (e.g. hawkeye-
-  style PC-based reuse prediction) and compare to true Optimal.
-
 ## Repository layout
 
 ```
